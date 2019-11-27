@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  .body-container.home__body
+    .card.home__card
+      h1.page__title Horse Racing
+      p Race Track URL:
+      form(action="/details", method="POST", target="_blank")
+        input#trackurl.form-control.mb-4(type="text" name="trackurl" placeholder="Enter Track URL")
+        button.btn.btn-primary.btn-block(type="submit") Submit
+block customscripts
+  script(src="/javascripts/index.js")

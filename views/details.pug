@@ -1,0 +1,49 @@
+extends layout
+
+block content
+  .loader-overlay
+    i.fa.fa-spinner.fa-pulse
+    .error__msg Error!
+  .container
+    .row.my-4
+      .col.text-center
+        h1.page__title Horse Racing
+    .row.mt-4
+      .col
+        .info__line
+          span.info__name Race Track Name:
+          span.info__detail#trackname 
+    .row.mb-4
+      .col-md-3
+        .info__line
+          span.info__name Race Number: 
+          span.info__detail#racenumber 
+      .col-md-3
+        .info__line
+          span.info__name No. Of Horses: 
+          span.info__detail#numberofhorses 
+      .col-md-3
+        .info__line
+          span.info__name MTP: 
+          span.info__detail#mtp
+    .row.my-2
+      .col.text-center
+        .table-responsive
+          table.saddle__table.table.table-bordered
+            thead.table-primary
+              tr
+                th Horses
+            tbody
+              tr
+    .row.my-4
+      .col.text-center
+        .table-responsive
+          table.race__table.table.table-bordered
+            thead.table-primary
+              tr
+                th Horses
+            tbody
+block customscripts
+  script.
+    var trackurl = !{JSON.stringify(trackurl)}
+  script(src="/javascripts/details.js")
