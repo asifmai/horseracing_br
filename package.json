@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/horseracing",
-    "devstart": "nodemon ./bin/horseracing",
+    "start": "node ./bin/horseracing_br",
+    "devstart": "nodemon ./bin/horseracing_br",
     "ship": "git add .&&git commit -m 'update'&&git push"
   },
   "dependencies": {
