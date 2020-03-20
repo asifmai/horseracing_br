@@ -13,9 +13,11 @@ module.exports.pagedata_post = async (req, res, next) => {
   const browser = await puppeteerHelper.launchBrowser(true);
   try {
     const page = await puppeteerHelper.launchPage(browser, false);
-    await page.goto(trackURL, {
+    const resp = await page.goto(trackURL, {
       waitUntil: 'networkidle2'
     });
+    console.log(resp.status());
+    console.log(resp.statusText());
     await page.waitForSelector('.raceNo', {
       timeout: 0
     });
