@@ -113,7 +113,7 @@ function startTimer0() {
         $('.loader-overlay .error__msg').css('display', 'block');
       };
     });
-  }, 90000);
+  }, 0);
 }
 
 function setIcononFocus() {
